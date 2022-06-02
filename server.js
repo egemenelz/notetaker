@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use(express.static('public'));
 
-// app.use('/api', appiRoutes);
+app.use('/api', appiRoutes);
 app.use('/', htmlRoutes);
 
 app.listen(PORT, () => {
