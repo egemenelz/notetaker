@@ -1,33 +1,21 @@
-{
-  "": [
-    {
-      "title": "TestTitle",
-      "text": "Test text"
-    },
-    {
-      "title": "SecondNote",
-      "text": "Test text",
-      "id": "1"
-    },
+[
     {
       "title": "Test Title",
-      "text": "Test text",
-      "id": "2"
+      "text": "Test text"
     },
     {
       "title": "Test Title 2",
       "text": "Test text",
+      "id": "1"
+    },
+    {
+      "title": "Test Title 3",
+      "text": "Test text",
+      "id": "2"
+    },
+    {
+      "title": "Test Title 4",
+      "text": "Test text",
       "id": "3"
-    },
-    {
-      "title": "Test Title",
-      "text": "Test Text",
-      "id": "4"
-    },
-    {
-      "title": "Credit Card Debts",
-      "text": "Pay!!",
-      "id": "5"
     }
-  ]
-}
+]
