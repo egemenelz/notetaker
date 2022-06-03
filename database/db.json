@@ -1,5 +1,5 @@
 {
-  "notes": [
+  "": [
     {
       "title": "TestTitle",
       "text": "Test text"
@@ -23,6 +23,11 @@
       "title": "Test Title",
       "text": "Test Text",
       "id": "4"
+    },
+    {
+      "title": "Credit Card Debts",
+      "text": "Pay!!",
+      "id": "5"
     }
   ]
 }
