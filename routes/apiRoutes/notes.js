@@ -2,6 +2,11 @@ const router = require('express').Router();
 const { findById, createNewNote, validateNote, filterByQuery } = require('../../lib/notes');
 const notes = require('../../database/db.json');
 
+/**
+ * GET API method
+ * /notes endpoint will return the data 
+ * we have in database with help of filterByQuery method
+ */
 router.get('/notes', (req, res) => {
     console.log(notes)
     let results = notes;
@@ -11,6 +16,12 @@ router.get('/notes', (req, res) => {
     res.json(results);
 })
 
+/**
+ * GET API method
+ * /notes/:id endpoint will return specific data
+ * with help of /:id will be able to pass id
+ * with help of findByID method will find data we are looking in database
+ */
 router.get('/notes/:id', (req, res) => {
     console.log(notes)
 
@@ -23,11 +34,13 @@ router.get('/notes/:id', (req, res) => {
     }
 })
 
+/**
+ * POST API method
+ * We will be able to create a new data by passing body while sending request
+ * first checking if note is match with expectections.
+ * If doesn't it will throw error, otherwise create new note succesfully 
+ */
 router.post('/notes', (req, res) => {
-    console.log(req.body);
-    console.log(notes)
-    // console.log(notes.length.toString())
-
     req.body.id = notes.length.toString();
 
     if (!validateNote(req.body)) {
@@ -38,12 +51,17 @@ router.post('/notes', (req, res) => {
     }
 });
 
+/**
+ * DELETE API Method
+ * We will be able to delete specific data from database
+ * We can pass id number on and help of findByid we will find the specific data
+ */
 router.delete('/notes/:id', (req, res) => {
     const noteToDelete = findById(req.params.id, notes);
 
-    if(noteToDelete){
+    if (noteToDelete) {
         res.json(noteToDelete);
-    }else{
+    } else {
         res.send(404);
     }
 

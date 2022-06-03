@@ -15,7 +15,9 @@ app.use(express.json());
 // it adds middleware for html/css/js codes 
 app.use(express.static('public'));
 
+// initializing apiRoutes to '/api'
 app.use('/api', apiRoutes);
+// initializing htmlRoutes to '/'
 app.use('/', htmlRoutes);
 
 app.listen(PORT, () => {
