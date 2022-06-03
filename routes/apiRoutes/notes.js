@@ -41,6 +41,7 @@ router.get('/notes/:id', (req, res) => {
  * If doesn't it will throw error, otherwise create new note succesfully 
  */
 router.post('/notes', (req, res) => {
+    console.log(notes.length)
     req.body.id = notes.length.toString();
 
     if (!validateNote(req.body)) {
